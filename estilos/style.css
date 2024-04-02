@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+
+@font-face {
+    font-family: flactory;
+    src: url(/fontes/flatory-sans-semibold-semi-condensed.ttf);
+}
+
+:root{
+    --cor0: #FFF2E3;
+    --cor1: #D5BC9E;
+    --cor2: #AA8A62;
+    --cor3: #805E34;
+    --cor4: #553815;
+
+    --fonte-logo: flactory;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Shippori Antique', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
