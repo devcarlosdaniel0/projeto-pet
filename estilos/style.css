@@ -11,6 +11,7 @@
     --cor2: #AA8A62;
     --cor3: #805E34;
     --cor4: #553815;
+    --cor5: #38260e;
 
     --fonte-logo: flactory;
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
@@ -20,4 +21,124 @@
 *{
     margin: 0px;
     padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    text-align: justify;
+}
+
+header > img{
+    display: block;
+    max-width: 250px;
+    max-height: 250px;
+    margin: auto;
+}
+
+header{
+    background-color: var(--cor1);
+}
+
+header > h1{
+    color: var(--cor5);
+    text-align: center;
+    font: normal bolder 2.5em var(--fonte-logo);
+}
+
+header > p{
+    color: var(--cor5);
+    text-align: center;
+    font: normal bold 2.5em var(--fonte-logo);
+}
+
+header > h1, header p{
+    background-image: linear-gradient(to right, transparent, var(--cor1));
+}
+
+nav{
+    background-color: var(--cor5);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.300);
+    margin-bottom: 20px;
+}
+
+nav > a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    text-decoration: underline;
+}
+
+main{
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+article{
+    font-family: var(--fonte-padrao);
+}
+
+article h1, h2{
+    font-family: var(--fonte-destaque);
+    text-align: left;
+    font-size: 2em;
+    padding-bottom: 20px;
+    color: var(--cor3);
+}
+
+article p{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+article a{
+    color: var(--cor2);
+    text-decoration: none;
+}
+
+article a:hover{
+    background-color: var(--cor1);
+    text-decoration: underline;
+}
+
+article ul{
+    list-style-position: inside;
+}
+
+article ul > li{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+article img{
+    width: 100%;
+}
+
+footer{
+    background-color: var(--cor3);
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    padding: 3px;
+}
+
+footer a{
+    color: var(--cor0);
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.insta::before{
+    margin-left: 5px;
+    content: url(../imagens/instagram-pq.png);
 }
