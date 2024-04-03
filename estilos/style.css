@@ -104,8 +104,19 @@ article p{
 }
 
 article a{
-    color: var(--cor2);
+    color: var(--cor5);
+    background-color: var(--cor0);
     text-decoration: none;
+}
+
+a#doar{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+a#telefone{
+    color: var(--cor5);
+    background-color: var(--cor0);
 }
 
 article a:hover{
@@ -126,6 +137,15 @@ article img{
     width: 100%;
 }
 
+.map {
+    height: 400px; /* Defina a altura do mapa */
+    width: 100%; /* Defina a largura do mapa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
 footer{
     background-color: var(--cor3);
     text-align: center;
@@ -144,3 +164,4 @@ footer a{
     margin-left: 5px;
     content: url(../imagens/instagram-pq.png);
 }
+
