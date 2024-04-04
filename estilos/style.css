@@ -157,7 +157,7 @@ footer{
 footer a{
     color: var(--cor0);
     text-decoration: none;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .insta::before{
