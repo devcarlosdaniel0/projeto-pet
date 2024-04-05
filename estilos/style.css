@@ -86,11 +86,11 @@ main{
     border-radius: 10px;
 }
 
-article{
+main{
     font-family: var(--fonte-padrao);
 }
 
-article h1, h2{
+main h1, h2{
     font-family: var(--fonte-destaque);
     text-align: left;
     font-size: 2em;
@@ -98,12 +98,12 @@ article h1, h2{
     color: var(--cor3);
 }
 
-article p{
+main p{
     font-size: 1.5em;
     padding-bottom: 20px;
 }
 
-article a{
+main a{
     color: var(--cor5);
     background-color: var(--cor0);
     text-decoration: none;
@@ -168,7 +168,7 @@ footer a{
 main#adotar{
     padding: 10px;
     min-height: 600px;
-    max-width: 1280px;
+    max-width: 1240px;
 }
 
 .conteudo {
@@ -180,7 +180,7 @@ main#adotar{
 .animais {
     width: 290px; 
     height: 500px; 
-    background-color: lightblue; 
+    background-color: var(--cor0); 
     border-radius: 10px;
     margin: 10px; 
   }
@@ -191,4 +191,8 @@ main#adotar{
     object-fit: contain;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.animais h1{
+    text-align: center;
 }
