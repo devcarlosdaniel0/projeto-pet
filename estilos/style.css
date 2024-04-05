@@ -81,7 +81,7 @@ main{
     background-color: white;
     margin: auto;
     margin-bottom: 20px;
-    max-width: 900px;
+    max-width: 1000px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -109,7 +109,7 @@ article a{
     text-decoration: none;
 }
 
-a#doar{
+a.clique{
     font-weight: bolder;
     font-size: 1.1em;
 }
@@ -165,3 +165,30 @@ footer a{
     content: url(../imagens/instagram-pq.png);
 }
 
+main#adotar{
+    padding: 10px;
+    min-height: 600px;
+    max-width: 1280px;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+  
+.animais {
+    width: 290px; 
+    height: 500px; 
+    background-color: lightblue; 
+    border-radius: 10px;
+    margin: 10px; 
+  }
+
+.animais img{
+    width: 100%;
+    height: 290px;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
