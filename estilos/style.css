@@ -180,7 +180,7 @@ main#adotar{
 .animais {
     width: 290px; 
     height: 500px; 
-    background-color: var(--cor0); 
+    background-color: var(--cor3); 
     border-radius: 10px;
     margin: 10px; 
   }
@@ -194,5 +194,27 @@ main#adotar{
 }
 
 .animais h1{
+    color: var(--cor1);
     text-align: center;
+}
+
+.btn{
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor0);
+    background-color: var(--cor2);
+    border: 1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 8px;
+    box-shadow: 2px 1px rgba(0, 0, 0, 0.450);
+    padding: 10px 10px;
+    width: 150px; 
+    margin: auto;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--cor4);
+    transition: 0.2s;
 }
