@@ -29,6 +29,7 @@ body{
 }
 
 header > img{
+    padding-top: 10px;
     display: block;
     max-width: 250px;
     max-height: 250px;
