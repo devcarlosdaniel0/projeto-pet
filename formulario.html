@@ -6,15 +6,7 @@
     <title>Adotando um Pet</title>
     <link rel="shortcut icon" href="imagens/Bellatine-PetCare.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/forms.css">
-    <script>
-        window.onload = function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var animal = urlParams.get('animal');
-            if (animal) {
-                document.getElementById('animalName').innerText = animal;
-            }
-        }
-    </script>
+    <script src="script/script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -88,7 +80,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a></button>
+                    <button onclick="enviarFormulario()"><a href="#">Continuar</a></button>
                 </div>
             </form>
         </div>
