@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    window.onload = function() {
+        var params = new URLSearchParams(window.location.search);
+        var firstName = params.get('firstName');
+        var lastName = params.get('lastName');
+        var email = params.get('email');
+        var animalName = params.get('animalName');
+
+        var mensagem = "Olá, " + firstName + " " + lastName + "! Você está adotando o animal " + animalName + ". Iremos analisar a sua adoção e entraremos em contato pelo e-mail " + email + ".";
+        document.getElementById('mensagem').innerText = mensagem;
+    }
+</script>
+</head>
+<body>
+    <div id="mensagem"></div>
+</body>
+</html>

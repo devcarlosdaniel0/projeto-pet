@@ -13,7 +13,16 @@ function enviarFormulario() {
     var email = document.getElementById('email').value;
     var animalName = document.getElementById('animalName').innerText;
 
-    // Exibindo a mensagem personalizada
-    var mensagem = "Olá, " + firstName + " " + lastName + "! Você está adotando o animal " + animalName + ". Iremos analisar a sua adoção e entraremos em contato pelo e-mail " + email + ".";
-    alert(mensagem);
+    // Construindo a URL com os parâmetros
+    var url = "confirmar.html?";
+    url += "firstName=" + encodeURIComponent(firstName);
+    url += "&lastName=" + encodeURIComponent(lastName);
+    url += "&email=" + encodeURIComponent(email);
+    url += "&animalName=" + encodeURIComponent(animalName);
+
+    // Redirecionando para a nova página
+    window.location.href = url;
+
+    // Evitando o envio padrão do formulário
+    return false;
 }
