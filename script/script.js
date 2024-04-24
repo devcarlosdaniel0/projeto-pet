@@ -26,3 +26,12 @@ function enviarFormulario() {
     // Evitando o envio padrão do formulário
     return false;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtém o valor da doação da URL
+    var params = new URLSearchParams(window.location.search);
+    var valorDoacao = params.get('valor');
+
+    // Exibe uma mensagem de agradecimento na página
+    document.getElementById('mensagem').innerText = 'Obrigado pela sua doação de R$ ' + valorDoacao + '! Sua generosidade faz toda a diferença.';
+});

@@ -6,6 +6,65 @@
     <title>Doações - PetCare</title>
     <link rel="shortcut icon" href="imagens/Bellatine-PetCare.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="script/script.js"></script>
+    <script>
+        function redirecionarAgradecimento() {
+            // Obtém o valor da doação
+            var valorDoacao = document.getElementById("valor").value;
+            // Abre uma nova aba com a página de agradecimento e passa o valor da doação como parâmetro na URL
+            window.open('agradecimento.html?valor=' + encodeURIComponent(valorDoacao), '_blank');
+            // Retorna false para evitar o envio do formulário tradicional
+            return false;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .donation-form {
+            margin-top: 20px;
+        }
+        .donation-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .donation-form input[type="text"],
+        .donation-form input[type="email"],
+        .donation-form input[type="tel"],
+        .donation-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .donation-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .donation-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,7 +81,27 @@
     <main>
         <article>
             <h1>Onde doar?</h1>
-            <p>Por meio do site <strong>PetLove</strong> você pode realizar doações para uma de nossas ONGs parceiras <a href="https://www.petlove.com.br/doacoes" target="_blank" rel="external" class="clique">Clicando Aqui!</a></p>       
+            <p>Por meio do site <strong>PetLove</strong> você pode realizar doações para uma de nossas ONGs parceiras <a href="https://www.petlove.com.br/doacoes" target="_blank" rel="external" class="clique">Clicando Aqui!</a></p>
+            
+            <div class="container">
+                <h1>Faça uma Doação</h1>
+                <form class="donation-form" onsubmit="redirecionarAgradecimento()">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+        
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="number">Celular</label>
+                    <input id="number" type="tel" name="number" placeholder="Ex: (12) 34567-8901" title="Ex: (12) 34567-8901" required pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
+
+                    <label for="valor">Valor da Doação (em reais):</label>
+                    <input type="number" id="valor" name="valor" min="1" step="any" required>
+        
+                    <input type="submit" value="Doar">
+                </form>
+            </div>
+
         </article>
     </main>
 
