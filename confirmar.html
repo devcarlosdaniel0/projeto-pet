@@ -3,21 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedido enviado</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="imagens/Bellatine-PetCare.ico" type="image/x-icon">
     <script>
-    window.onload = function() {
-        var params = new URLSearchParams(window.location.search);
-        var firstName = params.get('firstName');
-        var lastName = params.get('lastName');
-        var email = params.get('email');
-        var animalName = params.get('animalName');
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+            var firstName = params.get('firstName');
+            var lastName = params.get('lastName');
+            var email = params.get('email');
+            var animalName = params.get('animalName');
 
-        var mensagem = "Olá, " + firstName + " " + lastName + "! Você está adotando o animal " + animalName + ". Iremos analisar a sua adoção e entraremos em contato pelo e-mail " + email + ".";
-        document.getElementById('mensagem').innerText = mensagem;
-    }
-</script>
+            var mensagem = "Olá, " + firstName + " " + lastName + "! Você está adotando o animal " + animalName + ". Iremos analisar seu pedido de adoção e entraremos em contato pelo e-mail " + email;
+            document.getElementById('textoDaMensagem').innerText = mensagem;
+        }
+    </script>
+    <style>
+        header > h1 {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        p#textoDaMensagem {
+            text-align: justify;
+            padding-bottom: 50px;
+        }
+
+        .confere {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            padding-bottom: 50px;
+        }
+
+        .btn {
+            font-family: var(--fonte-padrao);
+        }
+    </style>
 </head>
 <body>
-    <div id="mensagem"></div>
+    <header>
+        <img src="imagens/Bellatine PetCare.png" alt="Logo">
+        <h1>Bellatine PetCare</h1>
+    </header>
+    
+    <main>
+        <article>
+            <div id="mensagem">
+                <p id="textoDaMensagem"> </p>
+            </div>
+        
+            <img class="confere" src="imagens/confere.png" alt="confere">
+
+            <a href="index.html">
+                <div class="btn">Voltar para a página inicial</div>
+            </a>
+        </article>
+    </main>
 </body>
 </html>

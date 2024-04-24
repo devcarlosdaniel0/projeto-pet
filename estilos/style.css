@@ -44,7 +44,7 @@ header > h1{
     color: var(--cor5);
     text-align: center;
     font: normal bolder 2.5em var(--fonte-logo);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 header > p{
