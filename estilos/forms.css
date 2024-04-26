@@ -181,6 +181,12 @@ body {
     color: white;
 }
 
+@media screen and (max-height: 720px) {
+    .container {
+        height: 92vh;
+    }
+}
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
