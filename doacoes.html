@@ -9,10 +9,13 @@
     <script src="script/script.js"></script>
     <script>
         function redirecionarAgradecimento() {
-            // Obtém o valor da doação
+            // Obtém o valor do nome e da doação
+            var nome = document.getElementById("nome").value;
             var valorDoacao = document.getElementById("valor").value;
-            // Redireciona para a página de agradecimento e passa o valor da doação como parâmetro na URL
-            window.location.href = 'agradecimento.html?valor=' + encodeURIComponent(valorDoacao);
+
+            // Redireciona para a página de agradecimento e passa o nome e o valor da doação como parâmetros na URL
+            window.location.href = 'agradecimento.html?nome=' + encodeURIComponent(nome) + '&valor=' + encodeURIComponent(valorDoacao);
+
             // Retorna false para evitar o envio do formulário tradicional
             return false;
         }
