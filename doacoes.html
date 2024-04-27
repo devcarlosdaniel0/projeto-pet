@@ -11,8 +11,8 @@
         function redirecionarAgradecimento() {
             // Obtém o valor da doação
             var valorDoacao = document.getElementById("valor").value;
-            // Abre uma nova aba com a página de agradecimento e passa o valor da doação como parâmetro na URL
-            window.open('agradecimento.html?valor=' + encodeURIComponent(valorDoacao), '_blank');
+            // Redireciona para a página de agradecimento e passa o valor da doação como parâmetro na URL
+            window.location.href = 'agradecimento.html?valor=' + encodeURIComponent(valorDoacao);
             // Retorna false para evitar o envio do formulário tradicional
             return false;
         }
@@ -85,7 +85,7 @@
             
             <div class="container">
                 <h1>Faça uma Doação</h1>
-                <form class="donation-form" onsubmit="redirecionarAgradecimento()">
+                <form class="donation-form" id="donationForm" onsubmit="return redirecionarAgradecimento()">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
         
