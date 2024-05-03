@@ -53,7 +53,7 @@
 
                     <div class="input-box">
                         <label for="cpf">CPF</label>
-                        <input id="cpf" type="text" name="cpf" placeholder="Ex: 12345678901" title="Ex: 12345678901" required pattern="\d{11}">
+                        <input type="text" name="cpf" id="cpf" pattern="^\d{3}[.]\d{3}[.]\d{3}-\d{2}$" required maxlength="14" oninput="formatarCPF(this)" placeholder="123.456.789-01" title="Ex: 123.456.789-01">
                     </div>
 
                     <div class="input-box">

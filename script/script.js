@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('mensagem').innerText = 'Obrigado, ' + nome + ', pela sua doação de R$ ' + valorDoacao + '! Sua generosidade faz toda a diferença.';
 });
 
+// CELULAR
+
 function formatarCelular(input) {
     var numCelular = input.value.replace(/\D/g, '');
     var formattedNum = '';
@@ -54,4 +56,27 @@ function formatarCelular(input) {
     }
 
     input.value = formattedNum;
+}
+
+// CPF 
+
+function formatarCPF(input) {
+    var numCPF = input.value.replace(/\D/g, '');
+
+    // Garante que o usuário possa digitar livremente sem interferência na entrada
+    var formattedCPF = numCPF;
+
+    // Adiciona os pontos e o hífen conforme necessário
+    if (numCPF.length > 3) {
+        formattedCPF = numCPF.substring(0, 3) + '.' + formattedCPF.substring(3);
+    }
+    if (numCPF.length > 6) {
+        formattedCPF = formattedCPF.substring(0, 7) + '.' + formattedCPF.substring(7);
+    }
+    if (numCPF.length > 9) {
+        formattedCPF = formattedCPF.substring(0, 11) + '-' + formattedCPF.substring(11);
+    }
+
+    // Atualiza o valor do campo de entrada com o CPF formatado
+    input.value = formattedCPF;
 }
