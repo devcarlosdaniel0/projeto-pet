@@ -36,3 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exibe uma mensagem de agradecimento na página
     document.getElementById('mensagem').innerText = 'Obrigado, ' + nome + ', pela sua doação de R$ ' + valorDoacao + '! Sua generosidade faz toda a diferença.';
 });
+
+function formatarCelular(input) {
+    var numCelular = input.value.replace(/\D/g, '');
+    var formattedNum = '';
+
+    if (numCelular.length > 2) {
+        formattedNum += '(' + numCelular.substring(0, 2) + ')';
+    } else {
+        formattedNum += '(' + numCelular.substring(0, 2);
+    }
+
+    if (numCelular.length > 2 && numCelular.length <= 7) {
+        formattedNum += ' ' + numCelular.substring(2, 7);
+    } else if (numCelular.length > 7) {
+        formattedNum += ' ' + numCelular.substring(2, 7) + '-' + numCelular.substring(7);
+    }
+
+    input.value = formattedNum;
+}
