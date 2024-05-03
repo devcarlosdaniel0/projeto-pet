@@ -57,8 +57,8 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="cep">CEP:</label>
-                        <input id="cep" type="text" name="cep" placeholder="Ex: 12345-678" title="Ex: 12345-678" required pattern="\d{5}-\d{3}">
+                        <label for="cep">CEP</label>
+                        <input type="tel" name="cep" id="cep" pattern="^\d{5}-\d{3}$" required maxlength="9" oninput="formatarCEP(this)" placeholder="12345-678" title="12345-678">
                     </div>
                 </div>
 

@@ -80,3 +80,22 @@ function formatarCPF(input) {
     // Atualiza o valor do campo de entrada com o CPF formatado
     input.value = formattedCPF;
 }
+
+// CEP
+    
+function formatarCEP(input) {
+    var numCEP = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    // Adiciona um hífen após os primeiros 5 dígitos, se houver mais de 5 dígitos
+    if (numCEP.length > 5) {
+        numCEP = numCEP.substring(0, 5) + '-' + numCEP.substring(5);
+    }
+
+    // Limita o comprimento do CEP formatado para 9 caracteres
+    if (numCEP.length > 9) {
+        numCEP = numCEP.substring(0, 9);
+    }
+
+    // Atualiza o valor do campo de entrada com o CEP formatado
+    input.value = numCEP;
+}
