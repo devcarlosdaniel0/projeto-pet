@@ -10,6 +10,10 @@
         gap: 0.5rem;
       }
 
+      #btn-mobile:hover {
+        color: tomato;
+      }
+
       #hamburger {
         border-top: 2px solid;
         width: 20px;

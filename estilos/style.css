@@ -26,7 +26,7 @@
 
 body {
     background-color: var(--cor0);
-    text-align: justify;
+    word-spacing: 5px;
 }
 
 #header {
@@ -50,6 +50,10 @@ body {
 #logo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+#logo:hover {
+    color: tomato;
 }
 
 #menu {
