@@ -6,19 +6,24 @@
     <title>Home - PetCare</title>
     <link rel="shortcut icon" href="imagens/Bellatine-PetCare.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <script src="script/script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="imagens/Bellatine PetCare.png" alt="Logo">
-        <h1>Bellatine PetCare</h1>
-        <p>Para um pet feliz e saudável: Bellatine PetCare.</p>
+    <header id="header">
+        <a id="logo" href="#">Logo</a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" onclick="toggleMenu()" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="adotar.html" target="_self" rel="next">Adotar</a></li>
+                <li><a href="contato.html" target="_self" rel="next">Contato</a></li>
+                <li><a href="doacoes.html" target="_self" rel="next">Doações</a></li>
+                <li><a href="divulgar.html" target="_self" rel="next">Divulgar</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="adotar.html" target="_self" rel="next">Adotar</a>
-        <a href="fale-conosco.html" target="_self" rel="next">Fale Conosco</a>
-        <a href="doacoes.html" target="_self" rel="next">Doações</a>
-        <a href="ajude-a-divulgar.html" target="_self" rel="next">Ajude a Divulgar</a>
-    </nav>
     <main>
         <article>
             <h1>Bem vindo ao nosso site</h1>

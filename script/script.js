@@ -1,3 +1,5 @@
+// Localizar nome do animal
+
 window.onload = function() {
     var urlParams = new URLSearchParams(window.location.search);
     var animal = urlParams.get('animal');
@@ -5,6 +7,8 @@ window.onload = function() {
         document.getElementById('animalName').innerText = animal;
     }
 }
+
+// Coletar dados do envio do formulário
 
 function enviarFormulario() {
     // Capturando os valores dos campos do formulário
@@ -26,16 +30,6 @@ function enviarFormulario() {
     // Evitando o envio padrão do formulário
     return false;
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtém o valor da doação da URL
-    var params = new URLSearchParams(window.location.search);
-    var nome = params.get('nome');
-    var valorDoacao = params.get('valor');
-
-    // Exibe uma mensagem de agradecimento na página
-    document.getElementById('mensagem').innerText = 'Obrigado, ' + nome + ', pela sua doação de R$ ' + valorDoacao + '! Sua generosidade faz toda a diferença.';
-});
 
 // CELULAR
 
@@ -99,3 +93,23 @@ function formatarCEP(input) {
     // Atualiza o valor do campo de entrada com o CEP formatado
     input.value = numCEP;
 }
+
+// Menu mobile
+
+const menuBtn = document.getElementById('btn-mobile');
+
+function toggleMenu() {
+    if (event.type === 'touchstart') event.preventDefault();
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+    const active = nav.classList.contains('active');
+    event.currentTarget.setAttribute('aria-expanded', active);
+    if (active) {
+        event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
+    } else {
+        event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
+    }
+}
+
+menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener('touchstart', toggleMenu);
