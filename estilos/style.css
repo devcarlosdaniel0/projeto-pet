@@ -12,6 +12,7 @@
     --cor3: #805E34;
     --cor4: #553815;
     --cor5: #38260e;
+    --cor6: #251909;
 
     --fonte-logo: flactory;
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
@@ -29,7 +30,7 @@ body {
 }
 
 #header {
-    background-color: black;
+    background-color: var(--cor6);
     box-sizing: border-box;
     height: 80px;
     padding: 1rem;

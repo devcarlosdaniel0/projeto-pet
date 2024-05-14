@@ -46,7 +46,7 @@
         width: 100%;
         top: 80px;
         right: 0px;
-        background-color: black;
+        background-color: var(--cor6);
         transition: 0.4s;
         z-index: 1000;
         height: 0px;
