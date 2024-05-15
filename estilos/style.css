@@ -52,6 +52,15 @@ body {
     font-weight: bold;
 }
 
+#logo img {
+    display: block;
+    margin: auto;
+    width: 63px;
+    background-color: var(--cor0);
+    border: 3px solid var(--cor2);
+    border-radius: 50%;
+}
+
 #logo:hover {
     color: tomato;
 }
