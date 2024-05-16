@@ -113,3 +113,24 @@ function toggleMenu() {
 
 menuBtn.addEventListener('click', toggleMenu);
 menuBtn.addEventListener('touchstart', toggleMenu);
+
+// SLIDER
+
+var radio = document.querySelector('.manual-btn')
+var cont = 1
+
+document.getElementById('radio1').checked = true
+
+setInterval(() => {
+    nextImg()
+}, 3000)
+
+function nextImg(){
+    cont++
+
+    if(cont > 4){
+        cont = 1
+    }
+
+    document.getElementById('radio'+cont).checked = true
+}
