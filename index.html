@@ -30,50 +30,18 @@
             <h1>Bem vindo ao site Pet Care</h1>
             <p>Bem-vindo ao nosso site dedicado aos amantes de animais e apoio aos peludos sem lar. Comprometidos em fornecer informações valiosas e recursos úteis sobre cuidados e proteção de <strong>animais de rua</strong>.</p>
 
-            <section class="slider">
-                <div class="slider-content">
-        
-                    <input type="radio" name="btn-radio" id="radio1">
-                    <input type="radio" name="btn-radio" id="radio2">
-                    <input type="radio" name="btn-radio" id="radio3">
-                    <input type="radio" name="btn-radio" id="radio4">
-        
-                    <div class="slide-box first">
-                        <img class="img-desktop" src="imagens/cachorro 1.jpeg" alt="Imagem 1">
-                        <img class="img-mobile" src="imagens/cachorro 1 mobile.jpeg" alt="Imagem 1">
-                    </div>
-        
-                    <div class="slide-box">
-                        <img class="img-desktop" src="imagens/cachorro 2.jpg" alt="Imagem 2">
-                        <img class="img-mobile" src="imagens/cachorro 2 mobile.jpg" alt="Imagem 2">
-                    </div>
-        
-                    <div class="slide-box">
-                        <img class="img-desktop" src="imagens/cachorro 3.jpg" alt="Imagem 3">
-                        <img class="img-mobile" src="imagens/cachorro 3 mobile.jpg" alt="Imagem 3">
-                    </div>
-        
-                    <div class="slide-box">
-                        <img class="img-desktop" src="imagens/cachorro 4.jpg" alt="Imagem 4">
-                        <img class="img-mobile" src="imagens/cachorro 4 mobile.jpg" alt="Imagem 4">
-                    </div>
-        
-                    <div class="nav-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
-        
-                    <div class="nav-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
-        
+            <div class="carousel">
+                <div class="slides">
+                  <div class="slide"><img src="imagens/cachorro 1.jpeg" alt="Slide 1"></div>
+                  <div class="slide"><img src="imagens/cachorro 2.jpg" alt="Slide 2"></div>
+                  <div class="slide"><img src="imagens/cachorro 3.jpg" alt="Slide 3"></div>
                 </div>
-            </section>
+                <div class="indicators">
+                  <span class="indicator" onclick="goToSlide(0)"></span>
+                  <span class="indicator" onclick="goToSlide(1)"></span>
+                  <span class="indicator" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
 
             <h2>Quem Somos</h2>
             <p>Somos uma empresa social fictícia em parceria com a <a href="https://www.instagram.com/clinica_veterinaria_bellatine/" target="_blank" rel="external" class="insta">Clinica Veterinária Bellatine</a></p>

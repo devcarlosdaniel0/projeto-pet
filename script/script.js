@@ -116,21 +116,33 @@ menuBtn.addEventListener('touchstart', toggleMenu);
 
 // SLIDER
 
-var radio = document.querySelector('.manual-btn')
-var cont = 1
+let slides = document.querySelectorAll('.slide');
+let indicators = document.querySelectorAll('.indicator');
+let currentSlide = 0;
 
-document.getElementById('radio1').checked = true
+function goToSlide(n) {
+  currentSlide = n;
+  updateSlider();
+}
+
+function updateSlider() {
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${-currentSlide * 100}%)`;
+  });
+  updateIndicators();
+}
+
+function updateIndicators() {
+  indicators.forEach((indicator, index) => {
+    if (index === currentSlide) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
+}
 
 setInterval(() => {
-    nextImg()
-}, 3000)
-
-function nextImg(){
-    cont++
-
-    if(cont > 4){
-        cont = 1
-    }
-
-    document.getElementById('radio'+cont).checked = true
-}
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlider();
+}, 3000); // Alterar slide a cada 3 segundos

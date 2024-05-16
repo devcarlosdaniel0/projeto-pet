@@ -1,89 +1,43 @@
-body {
-    overflow-x: hidden;
-}
-
-section.slider {
-    margin: 0 auto;
+.carousel {
     width: 100%;
-    height: auto;
-    padding: 0;
     overflow: hidden;
-}
-
-.slider-content {
-    width: 400%;
-    height: auto;
-    display: flex;
-    margin-bottom: 50px;
-}
-
-.slider-content input, .img-mobile {
-    display: none;
-}
-
-.slide-box {
-    width: 25%;
-    height: auto;
     position: relative;
-    text-align: center;
+    padding-bottom: 50px; 
+}
+
+.slides {
+    display: flex;
     transition: 1s;
 }
 
-.slide-box img {
-    width: 100%;
+.slide {
+    min-width: 100%;
+    flex: 0 0 auto;
 }
 
-.nav-manual, .nav-auto {
+.indicators {
     position: absolute;
-    width: 100%;
-    margin-top: 40%;
+    bottom: 15px; 
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.nav-manual .manual-btn, .nav-auto div {
-    border: 1px solid red;
-    padding: 10px;
+.indicator {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(180, 180, 180);
     border-radius: 50%;
+    margin: 0 5px;
     cursor: pointer;
-    transition: 0.2s;
 }
 
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
-    margin-right: 10px;
+.indicator:hover {
+    background-color: #805E34;
 }
 
-.nav-manual .manual-btn:hover {
-    background-color: red;
-}
-
-#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3, #radio4:checked ~ .nav-auto .auto-btn4  {
-    background-color: red;
-}
-
-#radio1:checked ~ .first {
-    margin-left: 0%;
-}
-#radio2:checked ~ .first {
-    margin-left: -25%;
-}
-#radio3:checked ~ .first {
-    margin-left: -50%;
-}
-#radio4:checked ~ .first {
-    margin-left: -75%;
-}
-
-@media screen and (max-width: 900px) {
-    .img-desktop {
-        display: none;
-    }
-
-    .img-mobile {
-        display: block;
-    }
-
-    .nav-auto, .nav-manual {
-        margin-top: 60%;
-    }
+.indicator.active {
+    background-color: #553815;
 }
