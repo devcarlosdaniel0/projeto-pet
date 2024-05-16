@@ -145,4 +145,4 @@ function updateIndicators() {
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlider();
-}, 3000); // Alterar slide a cada 3 segundos
+}, 4000); // Alterar slide a cada 3 segundos
