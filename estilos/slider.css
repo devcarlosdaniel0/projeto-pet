@@ -15,10 +15,6 @@
     flex: 0 0 auto;
 }
 
-.img-mobile {
-    display: none;
-}
-
 .indicators {
     position: absolute;
     bottom: 15px; 
@@ -44,16 +40,4 @@
 
 .indicator.active {
     background-color: #553815;
-}
-
-@media screen and (max-width: 1000px) {
-    .img-desktop {
-        display: none;
-    }
-
-    .img-mobile {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
 }
