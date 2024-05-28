@@ -17,27 +17,36 @@ function enviarFormulario() {
     var animalName = document.getElementById('animalName').innerText;
     var telefone = document.getElementById('celular').value;
     
-    // Combina o nome e sobrenome em uma única string
     var nomeCompleto = firstName + ' ' + lastName;
 
     var templateParams = {
         nomeCompleto: nomeCompleto,
         animalName: animalName,
         telefone: telefone,
-        user_email: email // Adiciona o email do usuário ao objeto templateParams com o nome user_email
+        user_email: email
     };
 
     emailjs.send('service_dksna5m', 'template_qquwrag', templateParams)
     .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email enviado com sucesso!');
-        window.location.href = 'confirmar.html';
+        
+        // Construindo a URL com os parâmetros
+        var url = "confirmar.html?";
+        url += "firstName=" + encodeURIComponent(firstName);
+        url += "&lastName=" + encodeURIComponent(lastName);
+        url += "&email=" + encodeURIComponent(email);
+        url += "&animalName=" + encodeURIComponent(animalName);
+
+        // Redirecionando para a nova página
+        window.location.href = url;
+
     }, function(error) {
         console.log('FAILED...', error);
         alert('Erro ao enviar email: ' + JSON.stringify(error));
     });
 
-    return false; // Evita o envio padrão do formulário
+    return false;
 }
 
 // CELULAR
