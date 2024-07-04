@@ -3,11 +3,11 @@
 # Desenvolvi um site sozinho, totalmente responsivo com o objetivo de ajudar animais de rua. Este projeto inclui diversas funcionalidades, como:
 
 <ul>
-  <li>Interações de Formulário: Preenchimento de dados de maneira formatada: CPF, CELULAR e CEP.</li>
-  <li>Envio de email: Ao enviar o formulário um email será enviado ao usuário automaticamente.</li>
-  <li>Sliders Dinâmicos: Exibição de imagens de maneira atrativa.</li>
-  <li>Google Maps: Implementação de iframes para localização da clínica veterinária parceira.</li>
-  <li>Menu Hamburger: Design adaptado para dispositivos móveis, garantindo navegação intuitiva.</li>
+  <li><strong>Interações de Formulário:</strong> Preenchimento de dados de maneira formatada: CPF, CELULAR e CEP.</li>
+  <li><strong>Envio de email:</strong> Ao enviar o formulário um email será enviado ao usuário automaticamente.</li>
+  <li><strong>Sliders Dinâmicos:</strong> Exibição de imagens de maneira atrativa.</li>
+  <li><strong>Google Maps:</strong> Implementação de iframes para localização da clínica veterinária parceira.</li>
+  <li><strong>Menu Hamburger:</strong> Design adaptado para dispositivos móveis, garantindo navegação intuitiva.</li>
 </ul>
 
 # Porque decidi criar esse site
