@@ -1,6 +1,6 @@
 # Projeto Social: Projeto-pet 🐈🐕🦴❤️
 
-# Desenvolvi um site sozinho, totalmente responsivo com o objetivo de ajudar animais de rua. Este projeto inclui diversas funcionalidades, como:
+<strong>Desenvolvi um site sozinho, totalmente responsivo com o objetivo de ajudar animais de rua. Este projeto inclui diversas funcionalidades, como:</strong>
 
 <ul>
   <li><strong>Interações de Formulário:</strong> Preenchimento de dados de maneira formatada: CPF, CELULAR e CEP.</li>
