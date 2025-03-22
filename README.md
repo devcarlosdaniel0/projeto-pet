@@ -12,7 +12,7 @@ Desenvolvi um site sozinho, totalmente responsivo com o objetivo de ajudar anima
 
 # Porque decidi criar esse site
 
-Atendendo à solicitação de um trabalho escolar, minha escola requisitou a criação de um projeto social com o intuito de abordar um problema presente na sociedade. Considerando isso e aproveitando o fato de que estava cursando HTML e CSS pelo "Curso em Vídeo", decidi colocar minhas habilidades em prática e me desafiar. Essa iniciativa foi uma excelente oportunidade de aprendizado e também uma maneira eficaz de ajudar animais indefesos.
+Atendendo à solicitação de um trabalho escolar, minha escola requisitou a criação de um projeto social com o intuito de abordar um problema presente na sociedade. Considerando isso e aproveitando o fato de que estava cursando HTML e CSS pelo <a href="https://github.com/devcarlosdaniel0/html-css" target="_blank">"Curso em Vídeo"</a>, decidi colocar minhas habilidades em prática e me desafiar. Essa iniciativa foi uma excelente oportunidade de aprendizado e também uma maneira eficaz de ajudar animais indefesos.
 
 # Link do site
 
