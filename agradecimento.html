@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agradecimento</title>
-    <link rel="shortcut icon" href="imagens/Pet Care.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="shortcut icon" href="imagens/Pet Care.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media-query.css" />
     <script src="script/script.js"></script>
     <style>
-        header > h1 {
-            padding: 0;
-            margin: 0;
-        }
+      header > h1 {
+        padding: 0;
+        margin: 0;
+      }
 
-        main {
-            text-align: center;
-            max-width: 1000px;
-        }
+      main {
+        text-align: center;
+        max-width: 1000px;
+      }
 
-        p#textoDaMensagem {
-            text-align: justify;
-            padding-bottom: 50px;
-        }
+      p#textoDaMensagem {
+        text-align: justify;
+        padding-bottom: 50px;
+      }
 
-        .confere {
-            width: 200px;
-            height: 200px;
-            display: inline-block;
-            padding-bottom: 50px;
-        }
+      .confere {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        padding-bottom: 50px;
+      }
 
-        .btn {
-            font-family: var(--fonte-padrao);
-        }
+      .btn {
+        font-family: var(--fonte-padrao);
+      }
     </style>
     <script>
-        // Coletar dados da doação
+      document.addEventListener("DOMContentLoaded", function () {
+        var params = new URLSearchParams(window.location.search);
+        var nome = params.get("nome");
+        var valorDoacao = params.get("valor");
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtém o valor da doação da URL
-            var params = new URLSearchParams(window.location.search);
-            var nome = params.get('nome');
-            var valorDoacao = params.get('valor');
-
-            // Exibe uma mensagem de agradecimento na página
-            document.getElementById('mensagem').innerText = 'Obrigado, ' + nome + ', pela sua doação de R$ ' + valorDoacao + '! Sua generosidade faz toda a diferença.';
-        });
+        document.getElementById("mensagem").innerText =
+          "Obrigado, " +
+          nome +
+          ", pela sua doação de R$ " +
+          valorDoacao +
+          "! Sua generosidade faz toda a diferença.";
+      });
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <a id="logo" href="index.html"><img src="imagens/Logo PetCare.png" alt="Logo do site"></a>
-        <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" onclick="toggleMenu()" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
-                <span id="hamburger"></span>
-            </button>
-            <ul id="menu" role="menu">
-                <li><a href="index.html" target="_self" rel="prev">ínicio</a></li>
-                <li><a href="adotar.html" target="_self" rel="prev">Adotar</a></li>
-                <li><a href="contato.html" target="_self" rel="prev">Contato</a></li>
-                <li><a href="doacoes.html" target="_self" rel="prev">Doações</a></li>
-            </ul>
-        </nav>
+      <a id="logo" href="index.html"
+        ><img src="imagens/Logo PetCare.png" alt="Logo do site"
+      /></a>
+      <nav id="nav">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          onclick="toggleMenu()"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="index.html" target="_self" rel="prev">ínicio</a></li>
+          <li><a href="adotar.html" target="_self" rel="prev">Adotar</a></li>
+          <li><a href="contato.html" target="_self" rel="prev">Contato</a></li>
+          <li><a href="doacoes.html" target="_self" rel="prev">Doações</a></li>
+        </ul>
+      </nav>
     </header>
-    
-    <main>
-        <article>
-            <div class="container">
-                <h1>Agradecimento pela Doação</h1>
-                <p id="mensagem"></p>
-            </div>
-            <script src="script/script.js"></script>
-        
-            <img class="confere" src="imagens/confere.png" alt="confere">
 
-            <a href="index.html">
-                <div class="btn">Voltar para a página inicial</div>
-            </a>
-        </article>
+    <main>
+      <article>
+        <div class="container">
+          <h1>Agradecimento pela Doação</h1>
+          <p id="mensagem"></p>
+        </div>
+        <script src="script/script.js"></script>
+
+        <img class="confere" src="imagens/confere.png" alt="confere" />
+
+        <a href="index.html">
+          <div class="btn">Voltar para a página inicial</div>
+        </a>
+      </article>
     </main>
-</body>
+  </body>
 </html>

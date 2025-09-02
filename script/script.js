@@ -31,14 +31,12 @@ function enviarFormulario() {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email enviado com sucesso!');
         
-        // Construindo a URL com os parâmetros
         var url = "confirmar.html?";
         url += "firstName=" + encodeURIComponent(firstName);
         url += "&lastName=" + encodeURIComponent(lastName);
         url += "&email=" + encodeURIComponent(email);
         url += "&animalName=" + encodeURIComponent(animalName);
 
-        // Redirecionando para a nova página
         window.location.href = url;
 
     }, function(error) {
@@ -75,10 +73,8 @@ function formatarCelular(input) {
 function formatarCPF(input) {
     var numCPF = input.value.replace(/\D/g, '');
 
-    // Garante que o usuário possa digitar livremente sem interferência na entrada
     var formattedCPF = numCPF;
 
-    // Adiciona os pontos e o hífen conforme necessário
     if (numCPF.length > 3) {
         formattedCPF = numCPF.substring(0, 3) + '.' + formattedCPF.substring(3);
     }
@@ -89,26 +85,22 @@ function formatarCPF(input) {
         formattedCPF = formattedCPF.substring(0, 11) + '-' + formattedCPF.substring(11);
     }
 
-    // Atualiza o valor do campo de entrada com o CPF formatado
     input.value = formattedCPF;
 }
 
 // CEP
     
 function formatarCEP(input) {
-    var numCEP = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    var numCEP = input.value.replace(/\D/g, ''); 
 
-    // Adiciona um hífen após os primeiros 5 dígitos, se houver mais de 5 dígitos
     if (numCEP.length > 5) {
         numCEP = numCEP.substring(0, 5) + '-' + numCEP.substring(5);
     }
 
-    // Limita o comprimento do CEP formatado para 9 caracteres
     if (numCEP.length > 9) {
         numCEP = numCEP.substring(0, 9);
     }
 
-    // Atualiza o valor do campo de entrada com o CEP formatado
     input.value = numCEP;
 }
 
@@ -163,4 +155,4 @@ function updateIndicators() {
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlider();
-}, 4000); // Alterar slide a cada 3 segundos
+}, 4000); 

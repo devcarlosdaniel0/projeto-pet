@@ -1,124 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doações - PetCare</title>
-    <link rel="shortcut icon" href="imagens/Pet Care.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="shortcut icon" href="imagens/Pet Care.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media-query.css" />
     <script src="script/script.js"></script>
     <script>
-        function redirecionarAgradecimento() {
-            // Obtém o valor do nome e da doação
-            var nome = document.getElementById("nome").value;
-            var valorDoacao = document.getElementById("valor").value;
+      function redirecionarAgradecimento() {
+        var nome = document.getElementById("nome").value;
+        var valorDoacao = document.getElementById("valor").value;
 
-            // Redireciona para a página de agradecimento e passa o nome e o valor da doação como parâmetros na URL
-            window.location.href = 'agradecimento.html?nome=' + encodeURIComponent(nome) + '&valor=' + encodeURIComponent(valorDoacao);
+        window.location.href =
+          "agradecimento.html?nome=" +
+          encodeURIComponent(nome) +
+          "&valor=" +
+          encodeURIComponent(valorDoacao);
 
-            // Retorna false para evitar o envio do formulário tradicional
-            return false;
-        }
+        return false;
+      }
     </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        .donation-form {
-            margin-top: 20px;
-        }
-        .donation-form label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .donation-form input[type="text"],
-        .donation-form input[type="email"],
-        .donation-form input[type="tel"],
-        .donation-form input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .donation-form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .donation-form input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      .donation-form {
+        margin-top: 20px;
+      }
+      .donation-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .donation-form input[type="text"],
+      .donation-form input[type="email"],
+      .donation-form input[type="tel"],
+      .donation-form input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .donation-form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .donation-form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
 
-        footer {
-            margin-top: 129px;
-        }
+      footer {
+        margin-top: 129px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <a id="logo" href="index.html"><img src="imagens/Logo PetCare.png" alt="Logo do site"></a>
-        <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" onclick="toggleMenu()" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
-                <span id="hamburger"></span>
-            </button>
-            <ul id="menu" role="menu">
-                <li><a href="index.html" target="_self" rel="prev">ínicio</a></li>
-                <li><a href="adotar.html" target="_self" rel="prev">Adotar</a></li>
-                <li><a href="contato.html" target="_self" rel="prev">Contato</a></li>
-                <li><a href="divulgar.html" target="_self" rel="next">Divulgar</a></li>
-            </ul>
-        </nav>
+      <a id="logo" href="index.html"
+        ><img src="imagens/Logo PetCare.png" alt="Logo do site"
+      /></a>
+      <nav id="nav">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          onclick="toggleMenu()"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="index.html" target="_self" rel="prev">ínicio</a></li>
+          <li><a href="adotar.html" target="_self" rel="prev">Adotar</a></li>
+          <li><a href="contato.html" target="_self" rel="prev">Contato</a></li>
+          <li>
+            <a href="divulgar.html" target="_self" rel="next">Divulgar</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <article>
-            <h1>Onde doar?</h1>
-            <p>Por meio do site <strong>PetLove</strong> você pode realizar doações para uma de nossas ONGs parceiras <a href="https://www.petlove.com.br/doacoes" target="_blank" rel="external" class="clique">Clicando Aqui!</a></p>
-            
-            <div class="container">
-                <h1>Faça uma Doação</h1>
-                <form class="donation-form" id="donationForm" onsubmit="return redirecionarAgradecimento()">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-        
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="celular">Celular</label>
-                    <input type="tel" name="celular" id="celular" pattern="^\(\d{2}\)\s\d{5}-\d{4}$" required maxlength="15" oninput="formatarCelular(this)" placeholder="(xx) xxxxx-xxxx" title="Ex: (01) 12345-1234">
+      <article>
+        <h1>Onde doar?</h1>
+        <p>
+          Por meio do site <strong>PetLove</strong> você pode realizar doações
+          para uma de nossas ONGs parceiras
+          <a
+            href="https://www.petlove.com.br/doacoes"
+            target="_blank"
+            rel="external"
+            class="clique"
+            >Clicando Aqui!</a
+          >
+        </p>
 
-                    <label for="valor">Valor da Doação (em reais):</label>
-                    <input type="number" id="valor" name="valor" min="1" step="any" required>
-        
-                    <input type="submit" value="Doar">
-                </form>
-            </div>
+        <div class="container">
+          <h1>Faça uma Doação</h1>
+          <form
+            class="donation-form"
+            id="donationForm"
+            onsubmit="return redirecionarAgradecimento()"
+          >
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
 
-        </article>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="celular">Celular</label>
+            <input
+              type="tel"
+              name="celular"
+              id="celular"
+              pattern="^\(\d{2}\)\s\d{5}-\d{4}$"
+              required
+              maxlength="15"
+              oninput="formatarCelular(this)"
+              placeholder="(xx) xxxxx-xxxx"
+              title="Ex: (01) 12345-1234"
+            />
+
+            <label for="valor">Valor da Doação (em reais):</label>
+            <input
+              type="number"
+              id="valor"
+              name="valor"
+              min="1"
+              step="any"
+              required
+            />
+
+            <input type="submit" value="Doar" />
+          </form>
+        </div>
+      </article>
     </main>
 
     <footer>
-        <a href="https://www.instagram.com/bellatinepetcare/" target="_blank" rel="external" class="insta">PetCare</a> 
-        <a href="https://www.instagram.com/clinica_veterinaria_bellatine/" target="_blank" rel="external" class="insta">Clínica</a>
+      <a
+        href="https://www.instagram.com/bellatinepetcare/"
+        target="_blank"
+        rel="external"
+        class="insta"
+        >PetCare</a
+      >
+      <a
+        href="https://www.instagram.com/clinica_veterinaria_bellatine/"
+        target="_blank"
+        rel="external"
+        class="insta"
+        >Clínica</a
+      >
     </footer>
-</body>
+  </body>
 </html>
